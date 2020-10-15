@@ -29,10 +29,10 @@ class Results extends React.Component {
         <div className="results">Results: {this.props.results.length} mail(s)</div>
         <div className="table">
           <div className="table-header">
-            <div onClick={this.props.sortResults}>From</div>
-            <div>To</div>
-            <div>Subject</div>
-            <div>Date</div>
+            <div onClick={(e) => this.props.sortResults('from')}>From</div>
+            <div onClick={(e) => this.props.sortResults('to')}>To</div>
+            <div onClick={(e) => this.props.sortResults('subject')}>Subject</div>
+            <div onClick={(e) => this.props.sortResults('date')}>Date</div>
           </div>
           {results}
           {logo}

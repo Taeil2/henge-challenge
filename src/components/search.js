@@ -2,7 +2,7 @@ import React from 'react';
 import './search.scss';
 
 import 'react-dates/initialize';
-import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
+import { DateRangePicker } from 'react-dates';
 import 'react-dates/lib/css/_datepicker.css';
 
 import iconCalender from './../images/icon_calender.svg'
