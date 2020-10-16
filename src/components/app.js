@@ -5,10 +5,13 @@ import data from './../data';
 import Search from './search';
 import Results from './results';
 
+// Allows results to be independent of the original data
+let results = [...data];
+
 class App extends React.Component {
   state = {
     data: data,
-    results: data,
+    results: results,
     sortBy: ''
   }
 
@@ -29,8 +32,9 @@ class App extends React.Component {
             sortBy: 'from-reverse'
           });
         } else if (this.state.sortBy === 'from-reverse') {
+          results = [...data];
           this.setState({
-            results: this.state.data,
+            results: results,
             sortBy: ''
           });
         } else {
@@ -57,8 +61,9 @@ class App extends React.Component {
             sortBy: 'to-reverse'
           });
         } else if (this.state.sortBy === 'to-reverse') {
+          results = [...data];
           this.setState({
-            results: this.state.data,
+            results: results,
             sortBy: ''
           });
         } else {
@@ -85,8 +90,9 @@ class App extends React.Component {
             sortBy: 'subject-reverse'
           });
         } else if (this.state.sortBy === 'subject-reverse') {
+          results = [...data];
           this.setState({
-            results: this.state.data,
+            results: results,
             sortBy: ''
           });
         } else {
@@ -113,8 +119,9 @@ class App extends React.Component {
             sortBy: 'date-reverse'
           });
         } else if (this.state.sortBy === 'date-reverse') {
+          results = [...data];
           this.setState({
-            results: this.state.data,
+            results: results,
             sortBy: ''
           });
         } else {
